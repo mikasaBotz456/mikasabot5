@@ -49,7 +49,7 @@ global.typemenu = 'document'
 global.multiplier = 69
 global.limitawal = {
     premium: "10000",
-    free: 100
+    free: 50
 }
 
 global.adventureRPG = 'https://telegra.ph/file/ff94536d69e0f4f3e7b54.jpg'
