@@ -279,7 +279,7 @@ if (lang === "id") {
 
  //FUN
 
-if (kuismath.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+if (kuismath.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = kuismath[m.sender.split('@')[0]][0]
 hadiah = kuismath[m.sender.split('@')[0]][1]
@@ -291,7 +291,7 @@ delete kuismath[m.sender.split('@')[0]]
 }
 
 
-if (('family100'+m.chat in _family100) && isCmd) {
+if (('family100'+m.chat in _family100) && !isCmd) {
 kuis = true
 let room = _family100['family100'+m.chat]
 let teks = budy.toLowerCase().replace(/[^\w\s\-]+/, '')
@@ -313,7 +313,7 @@ alpha.sendText(m.chat, caption, m, { contextInfo: { mentionedJid: parseMention(c
 if (isWin || isSurender) delete _family100['family100'+m.chat]
 }
 
-if (tebakgambar.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+if (tebakgambar.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebakgambar[m.sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -323,7 +323,7 @@ delete tebakgambar[m.sender.split('@')[0]]
 }
 
 
-if (tebakkata.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+if (tebakkata.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebakkata[m.sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -333,7 +333,7 @@ delete tebakkata[m.sender.split('@')[0]]
 }
 
 
-if (tebakbendera.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+if (tebakbendera.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebakbendera[m.sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -343,7 +343,7 @@ delete tebakbendera[m.sender.split('@')[0]]
 }
 
 
-if (caklontong.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+if (caklontong.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = caklontong[m.sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -353,7 +353,7 @@ delete caklontong[m.sender.split('@')[0]]
 }
 
 
-if (susunkata.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+if (susunkata.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = susunkata[m.sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -363,7 +363,7 @@ delete susunkata[m.sender.split('@')[0]]
 }
 
 
-if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebakkalimat[m.sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -373,7 +373,7 @@ delete tebakkalimat[m.sender.split('@')[0]]
 }
 
 
-if (siapaaku.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+if (siapaaku.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = siapaaku[m.sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -384,7 +384,7 @@ delete siapaaku[m.sender.split('@')[0]]
 
 
 
-if (tekateki.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+if (tekateki.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tekateki[m.sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -394,7 +394,7 @@ delete tekateki[m.sender.split('@')[0]]
 }
 
 
-if (tebakkabupaten.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+if (tebakkabupaten.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebakkabupaten[m.sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -404,7 +404,7 @@ delete tebakkabupaten[m.sender.split('@')[0]]
 }
 
 
-if (tebakkimia.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+if (tebakkimia.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebakkimia[m.sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -414,7 +414,7 @@ delete tebakkimia[m.sender.split('@')[0]]
 }
 
 
-if (tebaklirik.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+if (tebaklirik.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebaklirik[m.sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -424,7 +424,7 @@ delete tebaklirik[m.sender.split('@')[0]]
 }
 
 
-if (tebaktebakan.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+if (tebaktebakan.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
 kuis = true
 jawaban = tebaktebakan[m.sender.split('@')[0]]
 if (budy.toLowerCase() == jawaban) {
@@ -1977,10 +1977,10 @@ const buttojns = [
 						} else alpha.sendButDoc(m.chat, ini_anu,  '© ' + ownername, botname , ownername, `WhatsApp Bot Multi Device`, time, pp_bot, pp_bot, buttojns, [ownernya, ini_mark, m.sender], { quoted: ftroli})
 					}
 					if(typemenu == 'templateLocation'){
-						await alpha.send5ButLoc(m.chat, lang.menunya(salam, pushname, botname) , `© ${ownername}`,pp_bot, [{"urlButton": {"displayText": "Instagram Creator","url": `${youtube}`}},{"urlButton": {"displayText": "Rest Api's","url": `${myweb}`}},{"quickReplyButton": {"displayText": "Donasi","id": '.donate'}},{"quickReplyButton": {"displayText": "Owner","id": '.owner'}},{"quickReplyButton": {"displayText": "List Command","id": '.command'}}], { userJid: m.chat, quoted: m } )
+						await alpha.send5ButLoc(m.chat, lang.menunya(salam, pushname, botname) , `© ${ownername}`,pp_bot, [{"urlButton": {"displayText": "YouTube Creator","url": `${youtube}`}},{"urlButton": {"displayText": "Rest Api's","url": `${myweb}`}},{"quickReplyButton": {"displayText": "Donasi","id": '.donate'}},{"quickReplyButton": {"displayText": "Owner","id": '.owner'}},{"quickReplyButton": {"displayText": "List Command","id": '.command'}}], { userJid: m.chat, quoted: m } )
 							}
 						if(typemenu == 'templateTenor'){
-							alpha.send5ButGif(m.chat, lang.menunya(salam, pushname, botname) , `© ${ownername}` ,pp_bot, thumbGif, [{"urlButton": {"displayText": "Instagram Creator","url": `${youtube}`}},{"urlButton": {"displayText": "Rest Api's","url": `${myweb}`}},{"quickReplyButton": {"displayText": "Donasi","id": '.donate'}},{"quickReplyButton": {"displayText": "Owner","id": '.owner'}},{"quickReplyButton": {"displayText": "List Command","id": '.command'}}] , {quoted: m})
+							alpha.send5ButGif(m.chat, lang.menunya(salam, pushname, botname) , `© ${ownername}` ,pp_bot, thumbGif, [{"urlButton": {"displayText": "YouTube Creator","url": `${youtube}`}},{"urlButton": {"displayText": "Rest Api's","url": `${myweb}`}},{"quickReplyButton": {"displayText": "Donasi","id": '.donate'}},{"quickReplyButton": {"displayText": "Owner","id": '.owner'}},{"quickReplyButton": {"displayText": "List Command","id": '.command'}}] , {quoted: m})
 						 }
 						if(typemenu == 'katalog'){
 							alpha.sendKatalog(m.chat, "ALL MENU BOT", lang.listMenu(time, salam, pushname, prefix), pp_bot, {quoted:m})
@@ -1994,7 +1994,7 @@ const buttojns = [
 					}
 					break    
 	case 'allmenu':{
-			await alpha.send5ButLoc(from, `Hai kak ${pushname} 👋, saya *${botname}* ` + '\n\n' + lang.listMenu(time, salam, pushname, prefix) , `© ${ownername}`,pp_bot, [{"urlButton": {"displayText": "Instagram Creator","url": `${youtube}`}},{"urlButton": {"displayText": "Rest Api's","url": `${myweb}`}},{"quickReplyButton": {"displayText": "Donasi","id": '.donate'}},{"quickReplyButton": {"displayText": "Owner","id": '.owner'}},{"quickReplyButton": {"displayText": "Rules","id": '.rules'}}] )
+			await alpha.send5ButLoc(from, `Hai kak ${pushname} 👋, saya *${botname}* ` + '\n\n' + lang.listMenu(time, salam, pushname, prefix) , `© ${ownername}`,pp_bot, [{"urlButton": {"displayText": "YouTube Creator","url": `${youtube}`}},{"urlButton": {"displayText": "Rest Api's","url": `${myweb}`}},{"quickReplyButton": {"displayText": "Donasi","id": '.donate'}},{"quickReplyButton": {"displayText": "Owner","id": '.owner'}},{"quickReplyButton": {"displayText": "Rules","id": '.rules'}}] )
 		}
 	break   
 	case 'infocmd': case'infomenu':{
@@ -2184,7 +2184,7 @@ break
 			case 'ramalanjodoh': case 'ramaljodoh': {
 				if(db.data.settings[botNumber].userRegister && !db.data.users[m.sender].registered) return alpha.send2ButMes(m.chat, `🇮🇩 _Hi @${m.sender.split('@')[0]} silahkan verifikasi terlebih dahulu sebelum memakai fitur bot_${enter}${enter}🇺🇸 _Hi @${m.sender.split('@')[0]} please verify first before using the bot feature_`, `© ${ownername}`, `.daftar ` + pushname, `🇺🇸 Verify`, `.daftar ` + pushname, 'Daftar 🇮🇩', fkontak,  [m.sender])
 			if(db.data.users[m.sender].limit < 1) return alpha.send2ButMes(m.chat, lang.Nolimit(prefix), `© ${ownername}`, `.daily`, `👉 Daily`, `.weekly`, `Weekly 👈`, m)
-                if (!text) return reply(`Example : ${prefix + command} Mikasa, 12, 1, 2004, Clara, 22, 2, 2004`)
+                if (!text) return reply(`Example : ${prefix + command} Zeeone, 12, 1, 2004, Clara, 22, 2, 2004`)
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_jodoh(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return m.reply(anu.message)
@@ -2195,7 +2195,7 @@ break
             case 'ramalanjodohbali': case 'ramaljodohbali': {
             	if(db.data.settings[botNumber].userRegister && !db.data.users[m.sender].registered) return alpha.send2ButMes(m.chat, `🇮🇩 _Hi @${m.sender.split('@')[0]} silahkan verifikasi terlebih dahulu sebelum memakai fitur bot_${enter}${enter}🇺🇸 _Hi @${m.sender.split('@')[0]} please verify first before using the bot feature_`, `© ${ownername}`, `.daftar ` + pushname, `🇺🇸 Verify`, `.daftar ` + pushname, 'Daftar 🇮🇩', fkontak,  [m.sender])
 			if(db.data.users[m.sender].limit < 1) return alpha.send2ButMes(m.chat, lang.Nolimit(prefix), `© ${ownername}`, `.daily`, `👉 Daily`, `.weekly`, `Weekly 👈`, m)
-                if (!text) return reply(`Example : ${prefix + command} Mikasa, 12, 1, 2004, Clara, 22, 2, 2004`)
+                if (!text) return reply(`Example : ${prefix + command} Zeeone, 12, 1, 2004, Clara, 22, 2, 2004`)
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_jodoh_bali(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return m.reply(anu.message)
@@ -2206,7 +2206,7 @@ break
             case 'suamiistri': {
             	if(db.data.settings[botNumber].userRegister && !db.data.users[m.sender].registered) return alpha.send2ButMes(m.chat, `🇮🇩 _Hi @${m.sender.split('@')[0]} silahkan verifikasi terlebih dahulu sebelum memakai fitur bot_${enter}${enter}🇺🇸 _Hi @${m.sender.split('@')[0]} please verify first before using the bot feature_`, `© ${ownername}`, `.daftar ` + pushname, `🇺🇸 Verify`, `.daftar ` + pushname, 'Daftar 🇮🇩', fkontak,  [m.sender])
 			if(db.data.users[m.sender].limit < 1) return alpha.send2ButMes(m.chat, lang.Nolimit(prefix), `© ${ownername}`, `.daily`, `👉 Daily`, `.weekly`, `Weekly 👈`, m)
-                if (!text) return reply(`Example : ${prefix + command} Mikasa, 12, 1, 2004, Clara, 22, 2, 2004`)
+                if (!text) return reply(`Example : ${prefix + command} Zeeone, 12, 1, 2004, Clara, 22, 2, 2004`)
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.suami_istri(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return m.reply(anu.message)
@@ -2217,7 +2217,7 @@ break
             case 'ramalancinta': case 'ramalcinta': {
             	if(db.data.settings[botNumber].userRegister && !db.data.users[m.sender].registered) return alpha.send2ButMes(m.chat, `🇮🇩 _Hi @${m.sender.split('@')[0]} silahkan verifikasi terlebih dahulu sebelum memakai fitur bot_${enter}${enter}🇺🇸 _Hi @${m.sender.split('@')[0]} please verify first before using the bot feature_`, `© ${ownername}`, `.daftar ` + pushname, `🇺🇸 Verify`, `.daftar ` + pushname, 'Daftar 🇮🇩', fkontak,  [m.sender])
 			if(db.data.users[m.sender].limit < 1) return alpha.send2ButMes(m.chat, lang.Nolimit(prefix), `© ${ownername}`, `.daily`, `👉 Daily`, `.weekly`, `Weekly 👈`, m)
-                if (!text) return reply(`Example : ${prefix + command} Mikasa, 12, 1, 2004, Clara, 22, 2, 2004`)
+                if (!text) return reply(`Example : ${prefix + command} Zeeone, 12, 1, 2004, Clara, 22, 2, 2004`)
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_cinta(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return m.reply(anu.message)
@@ -2228,7 +2228,7 @@ break
             case 'artinama': {
             	if(db.data.settings[botNumber].userRegister && !db.data.users[m.sender].registered) return alpha.send2ButMes(m.chat, `🇮🇩 _Hi @${m.sender.split('@')[0]} silahkan verifikasi terlebih dahulu sebelum memakai fitur bot_${enter}${enter}🇺🇸 _Hi @${m.sender.split('@')[0]} please verify first before using the bot feature_`, `© ${ownername}`, `.daftar ` + pushname, `🇺🇸 Verify`, `.daftar ` + pushname, 'Daftar 🇮🇩', fkontak,  [m.sender])
 			if(db.data.users[m.sender].limit < 1) return alpha.send2ButMes(m.chat, lang.Nolimit(prefix), `© ${ownername}`, `.daily`, `👉 Daily`, `.weekly`, `Weekly 👈`, m)
-                if (!text) return reply(`Example : ${prefix + command} Mikasa`)
+                if (!text) return reply(`Example : ${prefix + command} Zeeone`)
                 let anu = await primbon.arti_nama(text)
                 if (anu.status == false) return m.reply(anu.message)
                 alpha.sendText(m.chat, `⭔ *Nama :* ${anu.message.nama}\n⭔ *Arti :* ${anu.message.arti}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
@@ -2238,7 +2238,7 @@ break
             case 'kecocokannama': case 'cocoknama': {
             	if(db.data.settings[botNumber].userRegister && !db.data.users[m.sender].registered) return alpha.send2ButMes(m.chat, `🇮🇩 _Hi @${m.sender.split('@')[0]} silahkan verifikasi terlebih dahulu sebelum memakai fitur bot_${enter}${enter}🇺🇸 _Hi @${m.sender.split('@')[0]} please verify first before using the bot feature_`, `© ${ownername}`, `.daftar ` + pushname, `🇺🇸 Verify`, `.daftar ` + pushname, 'Daftar 🇮🇩', fkontak,  [m.sender])
 			if(db.data.users[m.sender].limit < 1) return alpha.send2ButMes(m.chat, lang.Nolimit(prefix), `© ${ownername}`, `.daily`, `👉 Daily`, `.weekly`, `Weekly 👈`, m)
-                if (!text) return reply(`Example : ${prefix + command} Mikasa, 17, 2, 2004`)
+                if (!text) return reply(`Example : ${prefix + command} Zeeone, 12, 1, 2004`)
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.kecocokan_nama(nama, tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
@@ -2249,7 +2249,7 @@ break
             case 'kecocokanpasangan': case 'cocokpasangan': case 'pasangan': {
             	if(db.data.settings[botNumber].userRegister && !db.data.users[m.sender].registered) return alpha.send2ButMes(m.chat, `🇮🇩 _Hi @${m.sender.split('@')[0]} silahkan verifikasi terlebih dahulu sebelum memakai fitur bot_${enter}${enter}🇺🇸 _Hi @${m.sender.split('@')[0]} please verify first before using the bot feature_`, `© ${ownername}`, `.daftar ` + pushname, `🇺🇸 Verify`, `.daftar ` + pushname, 'Daftar 🇮🇩', fkontak,  [m.sender])
 			if(db.data.users[m.sender].limit < 1) return alpha.send2ButMes(m.chat, lang.Nolimit(prefix), `© ${ownername}`, `.daily`, `👉 Daily`, `.weekly`, `Weekly 👈`, m)
-                if (!text) return reply(`Example : ${prefix + command} Mikasa|Clara`)
+                if (!text) return reply(`Example : ${prefix + command} Zeeone|Clara`)
                 let [nama1, nama2] = text.split`|`
                 let anu = await primbon.kecocokan_nama_pasangan(nama1, nama2)
                 if (anu.status == false) return m.reply(anu.message)
@@ -2425,7 +2425,7 @@ break
             case 'sifat': case 'karakter': {
             	if(db.data.settings[botNumber].userRegister && !db.data.users[m.sender].registered) return alpha.send2ButMes(m.chat, `🇮🇩 _Hi @${m.sender.split('@')[0]} silahkan verifikasi terlebih dahulu sebelum memakai fitur bot_${enter}${enter}🇺🇸 _Hi @${m.sender.split('@')[0]} please verify first before using the bot feature_`, `© ${ownername}`, `.daftar ` + pushname, `🇺🇸 Verify`, `.daftar ` + pushname, 'Daftar 🇮🇩', fkontak,  [m.sender])
 				if(db.data.users[m.sender].limit < 1) return alpha.send2ButMes(m.chat, lang.Nolimit(prefix), `© ${ownername}`, `.daily`, `👉 Daily`, `.weekly`, `Weekly 👈`, m)
-                if (!text) return reply(`Example : ${prefix + command} Mikasa,12, 1, 2004`)
+                if (!text) return reply(`Example : ${prefix + command} Zeeone,12, 1, 2004`)
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.sifat_karakter_tanggal_lahir(nama, tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
@@ -2436,7 +2436,7 @@ break
             case 'keberuntungan': {
             	if(db.data.settings[botNumber].userRegister && !db.data.users[m.sender].registered) return alpha.send2ButMes(m.chat, `🇮🇩 _Hi @${m.sender.split('@')[0]} silahkan verifikasi terlebih dahulu sebelum memakai fitur bot_${enter}${enter}🇺🇸 _Hi @${m.sender.split('@')[0]} please verify first before using the bot feature_`, `© ${ownername}`, `.daftar ` + pushname, `🇺🇸 Verify`, `.daftar ` + pushname, 'Daftar 🇮🇩', fkontak,  [m.sender])
 			if(db.data.users[m.sender].limit < 1) return alpha.send2ButMes(m.chat, lang.Nolimit(prefix), `© ${ownername}`, `.daily`, `👉 Daily`, `.weekly`, `Weekly 👈`, m)
-                if (!text) return reply(`Example : ${prefix + command} Mikasa, 12, 1, 2004`)
+                if (!text) return reply(`Example : ${prefix + command} Zeeone, 12, 1, 2004`)
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.potensi_keberuntungan(nama, tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
