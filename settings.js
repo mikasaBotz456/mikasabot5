@@ -48,7 +48,7 @@ global.sessionName = 'session'
 global.typemenu = 'document'
 global.multiplier = 69
 global.limitawal = {
-    premium: "10000",
+    premium: "100000",
     free: 100
 }
 
