@@ -1067,7 +1067,7 @@ alpha.sendMessage(m.chat, {image: {url: ppnu}, caption: indonesia.profile(userna
             case 'wallpaper': {
             	if(db.data.settings[botNumber].userRegister && !db.data.users[m.sender].registered) return alpha.send2ButMes(m.chat, `🇮🇩 _Hi @${m.sender.split('@')[0]} silahkan verifikasi terlebih dahulu sebelum memakai fitur bot_${enter}${enter}🇺🇸 _Hi @${m.sender.split('@')[0]} please verify first before using the bot feature_`, `© ${ownername}`, `.daftar ` + pushname, `🇺🇸 Verify`, `.daftar ` + pushname, 'Daftar 🇮🇩', fkontak,  [m.sender])
 				if(db.data.users[m.sender].limit < 1) return alpha.send2ButMes(m.chat, lang.Nolimit(prefix), `© ${ownername}`, `.daily`, `👉 Daily`, `.weekly`, `Weekly 👈`, m)
-            	if (!text) return reply(lang.KisahNabi(prefix, command, 'Bot whatsapp'))
+            	if (!text) return reply(lang.KisahNabi(prefix, command, 'Mikasa Ackerman '))
                 reply(lang.wait())
                 wallpaper(text).then( async anu =>{
                 result = anu[Math.floor(Math.random(), anu.length)]
@@ -1091,7 +1091,7 @@ alpha.sendMessage(m.chat, {image: {url: ppnu}, caption: indonesia.profile(userna
             case 'wikimedia': {
             	if(db.data.settings[botNumber].userRegister && !db.data.users[m.sender].registered) return alpha.send2ButMes(m.chat, `🇮🇩 _Hi @${m.sender.split('@')[0]} silahkan verifikasi terlebih dahulu sebelum memakai fitur bot_${enter}${enter}🇺🇸 _Hi @${m.sender.split('@')[0]} please verify first before using the bot feature_`, `© ${ownername}`, `.daftar ` + pushname, `🇺🇸 Verify`, `.daftar ` + pushname, 'Daftar 🇮🇩', fkontak,  [m.sender])
 				if(db.data.users[m.sender].limit < 1) return alpha.send2ButMes(m.chat, lang.Nolimit(prefix), `© ${ownername}`, `.daily`, `👉 Daily`, `.weekly`, `Weekly 👈`, m)
-            	if (!text) return reply(lang.KisahNabi(prefix, command, 'Bot whatsapp'))
+            	if (!text) return reply(lang.KisahNabi(prefix, command, 'Mikasa Ackerman '))
                 reply(lang.wait())
                 wikimedia(text).then( async anu =>{
                 result = anu[Math.floor(Math.random(), anu.length)]
