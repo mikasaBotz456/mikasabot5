@@ -4707,6 +4707,17 @@ if(db.data.users[m.sender].limit < 1) return alpha.send2ButMes(m.chat, lang.Noli
                 db.data.users[m.sender].limit -= 1
 }
                 break
+ case 'brainly':{
+	if(db.data.settings[botNumber].userRegister && !db.data.users[m.sender].registered) return alpha.send2ButMes(m.chat, `🇮🇩 _Hi @${m.sender.split('@')[0]} silahkan verifikasi terlebih dahulu sebelum memakai fitur bot_${enter}${enter}🇺🇸 _Hi @${m.sender.split('@')[0]} please verify first before using the bot feature_`, `© ${ownername}`, `.daftar ` + pushname, `🇺🇸 Verify`, `.daftar ` + pushname, 'Daftar 🇮🇩', fkontak,  [m.sender])
+if(db.data.users[m.sender].limit < 1) return alpha.send2ButMes(m.chat, lang.Nolimit(prefix), `© ${ownername}`, `.daily`, `👉 Daily`, `.weekly`, `Weekly 👈`, m)
+	if (!text) return reply(lang.KisahNabi(prefix, command, 'Indonesia'))
+let res = await fetch(api('alfa', '/api/search/brainly', {query: text}, 'apikey'))
+if (!res.ok) return await res.text()
+let img = await res.json()
+let answer = await img.data.map((v, i) => `_*PERTANYAAN KE ${i + 1}*_\n${v.pertanyaan}\n${v.jawaban.map((v,i) => `*JAWABAN KE ${i + 1}*\n${v.text}`).join('\n')}`).join('\n\n----------------------------------------\n\n')
+m.reply(answer)
+	}
+	break 
 case 'fetch': case 'get':{
 	if (text.length < 2) return reply(lang.KisahNabi(prefix, command, 'https://google.com'))
 	if (!/^https?:\/\//.test(text)) throw 'Awali *URL* dengan http:// atau https://'
