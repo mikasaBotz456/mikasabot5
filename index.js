@@ -994,7 +994,7 @@ case 'kzowjsijzpappaka':{
 			try {
 				ppnu = await alpha.profilePictureUrl(m.sender, 'image')
 		} catch {
-			ppnu = 'https://telegra.ph/file/314ff4df0beda3262e211.jpg'
+			ppnu = 'https://telegra.ph/file/43249cd1f67180abc1b50.jpg'
 			}
 			
 			function msToDate(ms) {
