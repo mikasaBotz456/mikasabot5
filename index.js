@@ -1994,7 +1994,7 @@ const buttojns = [
 					}
 					break    
 	case 'allmenu':{
-			await alpha.send5ButLoc(from, `Hai kak ${pushname} 👋, saya *${botname}* ` + '\n\n' + lang.listMenu(time, salam, pushname, prefix) , `© ${ownername}`,pp_bot, [{"urlButton": {"displayText": "YouTube Creator","url": `${youtube}`}},{"urlButton": {"displayText": "Rest Api's","url": `${myweb}`}},{"quickReplyButton": {"displayText": "Donasi","id": '.donate'}},{"quickReplyButton": {"displayText": "Owner","id": '.owner'}},{"quickReplyButton": {"displayText": "Rules","id": '.rules'}}] )
+			await alpha.send5ButLoc(from, `Hai kak ${pushname} 👋, saya *${botname}* ` + '\n\n' + lang.listMenu(time, salam, pushname, prefix) , `© ${ownername}`,pp_bot, [{"urlButton": {"displayText": "Instagram","url": `${youtube}`}},{"urlButton": {"displayText": "Rest Api's","url": `${myweb}`}},{"quickReplyButton": {"displayText": "Donasi","id": '.donate'}},{"quickReplyButton": {"displayText": "Owner","id": '.owner'}},{"quickReplyButton": {"displayText": "Rules","id": '.rules'}}] )
 		}
 	break   
 	case 'infocmd': case'infomenu':{
