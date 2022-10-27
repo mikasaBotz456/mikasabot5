@@ -4873,13 +4873,6 @@ if(db.data.users[m.sender].limit < 1) return alpha.send2ButMes(m.chat, lang.Noli
             db.data.users[m.sender].limit -= 1
 }
             break
-case 'confes': case 'menfes': case 'confess': case 'menfess':
-if (!q1 && !q2 && !q3) return reply(`> Masukkan\n${prefix + command} Nomer&Nama&Pesan\n\n> Contoh?\n${prefix + command} 62xxx&Mikasa&Halo`)
-var nyz = phone('+' + q1);
-if (nyz.isValid == false) return reply("Nomer Yang anda masukkan tidak valid")
-alpha.sendMessage(nyz.phoneNumber.split("+")[1] + "@s.whatsapp.net", {text: `[ *NEW-NOTIF* ]\nHalo *kamu*, Ada pesan rahasia nihh dari *${q2}*, Katanya *"${q3}"*, Dia ngirim pesan ini  jam ${time}, Mau balas? Gunakan command #confes`},{quoted:nay1})
-only("sukses", alpha, from)
-break
 		case 'bass': case 'blown': case 'deep': case 'earrape': case 'fast': case 'fat': case 'nightcore': case 'reverse': case 'robot': case 'slow': case 'smooth': case 'tupai':
 if(db.data.settings[botNumber].userRegister && !db.data.users[m.sender].registered) return alpha.send2ButMes(m.chat, `🇮🇩 _Hi @${m.sender.split('@')[0]} silahkan verifikasi terlebih dahulu sebelum memakai fitur bot_${enter}${enter}🇺🇸 _Hi @${m.sender.split('@')[0]} please verify first before using the bot feature_`, `© ${ownername}`, `.daftar ` + pushname, `🇺🇸 Verify`, `.daftar ` + pushname, 'Daftar 🇮🇩', fkontak,  [m.sender])
 if(db.data.users[m.sender].limit < 1) return alpha.send2ButMes(m.chat, lang.Nolimit(prefix), `© ${ownername}`, `.daily`, `👉 Daily`, `.weekly`, `Weekly 👈`, m)
