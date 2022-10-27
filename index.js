@@ -4874,7 +4874,6 @@ if(db.data.users[m.sender].limit < 1) return alpha.send2ButMes(m.chat, lang.Noli
 }
             break
 case 'confes': case 'menfes': case 'confess': case 'menfess':
-if (cekUser("id", sender) == null) return Notdaftar()
 if (!q1 && !q2 && !q3) return reply(`> Masukkan\n${prefix + command} Nomer&Nama&Pesan\n\n> Contoh?\n${prefix + command} 62xxx&Mikasa&Halo`)
 var nyz = phone('+' + q1);
 if (nyz.isValid == false) return reply("Nomer Yang anda masukkan tidak valid")
